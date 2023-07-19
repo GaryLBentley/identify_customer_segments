@@ -17561,7 +17561,7 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h5 id="75%25-of-our-data-has-3-or-less-missing-values,-but-there-are-a-lot-of-outliers-that-have-up-to-46-missing-values-per-row!">75% of our data has 3 or less missing values, but there are a lot of outliers that have up-to 46 missing values per row!<a class="anchor-link" href="#75%25-of-our-data-has-3-or-less-missing-values,-but-there-are-a-lot-of-outliers-that-have-up-to-46-missing-values-per-row!">&#182;</a></h5>
+<h5 id="75%25-of-our-data-has-3-or-less-missing-values,-but-there-are-a-lot-of-outliers-that-have-up-to-49-missing-values-per-row!">75% of our data has 3 or less missing values, but there are a lot of outliers that have up-to 49 missing values per row!<a class="anchor-link" href="#75%25-of-our-data-has-3-or-less-missing-values,-but-there-are-a-lot-of-outliers-that-have-up-to-49-missing-values-per-row!">&#182;</a></h5>
 </div>
 </div>
 </div>
@@ -19249,7 +19249,7 @@ memory usage: 432.5+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Discussion-1.2.1:-Re-Encode-Categorical-Features">Discussion 1.2.1: Re-Encode Categorical Features<a class="anchor-link" href="#Discussion-1.2.1:-Re-Encode-Categorical-Features">&#182;</a></h4><p>(Double-click this cell and replace this text with your own text, reporting your findings and decisions regarding categorical features. Which ones did you keep, which did you drop, and what engineering steps did you perform?)</p>
+<h4 id="Discussion-1.2.1:-Re-Encode-Categorical-Features">Discussion 1.2.1: Re-Encode Categorical Features<a class="anchor-link" href="#Discussion-1.2.1:-Re-Encode-Categorical-Features">&#182;</a></h4><p>I identified categoral features by querying the data on the type column. Columns to keep were identified above and the pd.get_dummies() function was used to process a list of feature names that needed to be encoded. The remaining categorical features where dropped.</p>
 
 </div>
 </div>
@@ -19412,8 +19412,7 @@ Data also represents decades, starting with the 40's going to the 90's, so they 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Discussion-1.2.2:-Engineer-Mixed-Type-Features">Discussion 1.2.2: Engineer Mixed-Type Features<a class="anchor-link" href="#Discussion-1.2.2:-Engineer-Mixed-Type-Features">&#182;</a></h4><p>(Double-click this cell and replace this text with your own text, reporting your findings and decisions regarding mixed-value features. Which ones did you keep, which did you drop, and what engineering steps did you perform?)</p>
-<p>For the mixed-type features, I keept the PRAEGENDE_JUGENDJAHRE and CAMEO_INTL_2015 columns.<br></p>
+<h4 id="Discussion-1.2.2:-Engineer-Mixed-Type-Features">Discussion 1.2.2: Engineer Mixed-Type Features<a class="anchor-link" href="#Discussion-1.2.2:-Engineer-Mixed-Type-Features">&#182;</a></h4><p>For the mixed-type features, I keept the PRAEGENDE_JUGENDJAHRE and CAMEO_INTL_2015 columns.<br></p>
 <p>For PRAEGENDE_JUGENDJAHRE, I created two dictionary objects, one for movement and the other for decades. These were created using the information contained in the data dictionary file. Two new columns were created - move and decade. The replace function was utilized to replace the data using values from the dictionary. The PRAEGENDE_JUGENDJAHRE column was then dropped from the table.<br></p>
 <p>CAMEO_INTL_2015 required a different aproach. The new columns wealth and life_stage were created and populated using a lambda function to split the value into it's first or second digit. The CAMEO_INTL_2015 was then dropped from the table.<br></p>
 <p>Dropped these features because they are mixed or are too granular.<br></p>
